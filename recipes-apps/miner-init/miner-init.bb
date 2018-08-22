@@ -10,9 +10,14 @@ SRC_URI = "file://init-cpuminer"
 DEPENDS = "cpuminer-multi"
 RDEPENDS_${PN} = "cpuminer-multi"
 
+# set your email user in local.conf
+EMAIL ?= ""
+
 do_install_append() {
 	install -d ${D}/etc/init.d
 	install -m 0755 ${WORKDIR}/init-cpuminer ${D}/etc/init.d
+
+	sed -i 's/%EMAIL%/${EMAIL}/g' ${D}/etc/init.d/init-cpuminer
 }
 
 inherit update-rc.d

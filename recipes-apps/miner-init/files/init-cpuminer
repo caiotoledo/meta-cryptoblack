@@ -5,7 +5,7 @@
 
 start() {
 	printf "Starting Miner: "
-	start-stop-daemon -b -S -q -m -p /var/run/cpuminer.pid --exec cpuminer -- -a cryptonight -o stratum+tcp://dsh.pool.minergate.com:45720 -u caioviniciusdetoledo@gmail.com -B
+	start-stop-daemon -b -S -q -m -p /var/run/cpuminer.pid --exec cpuminer -- -a cryptonight -o stratum+tcp://dsh.pool.minergate.com:45720 -u %EMAIL% -B
 	echo "OK"
 }
 
