@@ -8,6 +8,7 @@ CORE_IMAGE_EXTRA_INSTALL += "\
 	miner-init \
 	${@base_contains("MACHINE", "beaglebone-green-wifi", "wl18xx-fw", "", d)} \
 	${@base_contains("MACHINE", "beaglebone-green-wifi", "dhcp-client", "", d)} \
+	${@base_contains("MACHINE", "beaglebone-green-wifi", "wifi-init", "", d)} \
 "
 
 IMAGE_INSTALL_append = " kernel-modules kernel-devicetree"
