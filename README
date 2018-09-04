@@ -63,4 +63,7 @@ other layers needed. e.g.:
 II. Misc
 ========
 
---- replace with specific information about the meta-cryptoblack layer ---
+Variables to be configured in conf/local.conf:
+- EMAIL -> User e-mail for miner-init script;
+- SSID -> Wifi name for automatic connection;
+- PSK -> Use wpa_passphrase to get psk value.
