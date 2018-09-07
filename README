@@ -14,7 +14,7 @@ This layer depends on:
 
   URI: git://git.openembedded.org/openembedded-core
   layers: meta
-  branch: master
+  branch: rocko
 
   URI: git@github.com:wouterlucas/meta-cryptocurrency.git
   layers: meta-cryptocurrency
@@ -55,8 +55,8 @@ other layers needed. e.g.:
     /path/to/yocto/meta \
     /path/to/yocto/meta-poky \
     /path/to/yocto/meta-yocto-bsp \
-    /path/to/yocto/meta-meta-cryptocurrency \
-    /path/to/yocto/meta-meta-cryptoblack \
+    /path/to/yocto/meta-cryptocurrency \
+    /path/to/yocto/meta-cryptoblack \
     "
 
 
