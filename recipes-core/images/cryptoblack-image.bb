@@ -12,7 +12,10 @@ CORE_IMAGE_EXTRA_INSTALL += "\
 "
 
 IMAGE_INSTALL_append = " kernel-modules kernel-devicetree"
-IMAGE_BOOT_FILES_append = " zImage am335x-bone.dtb am335x-boneblack.dtb am335x-bonegreen.dtb am335x-bonegreen-wireless.dtb uEnv.txt"
+IMAGE_BOOT_FILES_append = " zImage am335x-bone.dtb am335x-boneblack.dtb uEnv.txt"
+
+BOOT_FILES_BEAGLEBONE_GREEN = "am335x-bonegreen-wireless.dtb am335x-bonegreen.dtb"
+IMAGE_BOOT_FILES_append = "${@bb.utils.contains('MACHINE', 'beaglebone-green-wifi', " ${BOOT_FILES_BEAGLEBONE_GREEN}", "", d )}"
 
 TOOLCHAIN_TARGET_TASK_append = " kernel-devsrc"
 
