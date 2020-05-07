@@ -1,4 +1,6 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${MACHINE}:"
-SRC_URI += "${@bb.utils.contains('MACHINE', 'beaglebone-green-wifi', "file://defconfig", "", d )}"
+SRC_URI_prepend_beaglebone-green-wifi = "\
+	file://defconfig \
+"
 
-KERNEL_DEVICETREE_append = "${@bb.utils.contains('MACHINE', 'beaglebone-green-wifi', " am335x-bonegreen-wireless.dtb", "", d )}"
+KERNEL_DEVICETREE_append_beaglebone-green-wifi = " am335x-bonegreen-wireless.dtb"
